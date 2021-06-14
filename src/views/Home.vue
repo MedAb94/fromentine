@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="light">
     <section class="hero">
       <v-container class="fill-height">
-        <v-row class="fill-height" align="center" justify="stretch">
-          <v-col cols="12" md="6" lg="4" class="text-center white--text">
+        <v-row class="fill-height" justify="stretch" align="center">
+          <v-col cols="12" md="8" lg="6" xl="4" class=" white--text">
             <h1 class="display-2">
               {{ $t('home.title.1') }}
               <span class="blue--text">{{ $t('home.title.2') }}</span>
@@ -30,12 +30,13 @@
           </v-col>
         </v-row>
       </v-container>
+
     </section>
-    <section class="light pa-8">
-      <v-card class="transparent pa-5" flat rounded>
+    <v-container>
+      <section class="py-8">
         <v-row>
-          <v-col class="text-center px-3">
-            <div class="white fill-height rounded">
+          <v-col class="text-center pa-3">
+            <div class="white fill-height py-3 rounded">
               <div>
                 <v-img src="../assets/icons/restaurant.png" max-width="80px" class="mx-auto"></v-img>
               </div>
@@ -47,8 +48,8 @@
               </div>
             </div>
           </v-col>
-          <v-col class="text-center px-3">
-            <div class="white fill-height rounded">
+          <v-col class="text-center pa-3">
+            <div class="white py-3 fill-height rounded">
               <div>
                 <v-img src="../assets/icons/serving-dish.png" max-width="80px" class="mx-auto"></v-img>
               </div>
@@ -60,8 +61,8 @@
               </div>
             </div>
           </v-col>
-          <v-col class="text-center px-3">
-            <div class="white fill-height rounded">
+          <v-col class="text-center pa-3">
+            <div class="white py-3 fill-height rounded">
               <div>
                 <v-img src="../assets/icons/delivery-man.png" max-width="80px" class="mx-auto"></v-img>
               </div>
@@ -74,22 +75,21 @@
             </div>
           </v-col>
         </v-row>
-      </v-card>
-      <div class="my-5">
-        <h1 class="primary--text mb-3">
-          {{ $t("services.title") }}
-        </h1>
-
-        <div style="background-color: #0077fb; width: 100px; height: 8px; border-radius: 4px"></div>
-        <v-icon style="margin-top: -34px; margin-left: 110px" small color="#0077fb">mdi-circle</v-icon>
-        <p> {{ $t("services.subtitle") }}
-        </p>
-      </div>
-    </section>
-    <section>
-      <v-container>
+      </section>
+      <!--Restaurants list-->
+      <section class="my-5">
+        <div class="my-8">
+          <h1 class="primary--text mb-3">
+            {{ $t("services.title") }}
+          </h1>
+          <div style="background-color: #0077fb; width: 100px; height: 8px; border-radius: 4px"></div>
+          <v-icon style="margin-top: -34px; margin-left: 110px" small color="#0077fb">mdi-circle</v-icon>
+          <p>
+            {{ $t("services.subtitle") }}
+          </p>
+        </div>
         <v-row justify="stretch">
-          <v-col cols="12" lg="4" md="4">
+          <v-col cols="12" lg="4" md="4" v-for="n in 9">
             <router-link
                 class="white--text "
                 :to="{name : 'Menu', params:{name: 'Res 1', id: c}}"
@@ -102,26 +102,25 @@
                 <v-img
                     src="../assets/img/restau.jpg"
                 />
-                <v-card-title class="primary white--text text-center">
-                  <H2 class="font-weight-bold blue--text">
+                <v-card-title class="primary ">
+                  <H2 class=" blue--text text-center">
                     LA FROMENTINE
                   </H2>
-                  <div class="font-weight-light">
+                  <div class="body-2 white--text">
                     <v-icon color="blue">mdi-map-marker</v-icon>
                     774A Boulevard Saint - Joseph <br>
                     <v-icon color="blue">mdi-map-marker</v-icon>
-                    1202 Bank St, Ottawa, On K1S 3Y1 <br>
+                    1202 Bank St, Ottawa, On K1S 3Y <br>
                   </div>
                 </v-card-title>
               </v-card>
             </router-link>
           </v-col>
         </v-row>
-      </v-container>
-    </section>
+      </section>
+    </v-container>
     <mail-box/>
   </div>
-
 </template>
 <script>
 import MailBox from "../components/MailBox.vue";
@@ -136,7 +135,7 @@ export default {
 </script>
 <style scoped lang="scss">
 .hero {
-  min-height: 500px;
+  height: 500px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/img/hero.jpg') no-repeat center center;
   background-size: cover;
   @media only screen and (max-width: 768px) {

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="light">
     <section class="hero">
       <v-container class="fill-height">
         <v-row class="fill-height" align="center" justify="stretch">
@@ -21,8 +21,8 @@
         </v-row>
       </v-container>
     </section>
-    <section class="light pa-8">
-      <v-card class="transparent pa-5" flat rounded>
+    <v-container>
+      <section class="py-8">
         <v-row>
           <v-col class="text-center px-3">
             <div class="white fill-height rounded">
@@ -76,24 +76,90 @@
             </div>
           </v-col>
         </v-row>
-      </v-card>
-      <div class="my-5">
-        <h1 class="font-weight-light">
-          Some Of Our
-        </h1>
-        <h1 class="display-2 orange--text font-weight-bold">Famous Dishes</h1>
-         <p class="mt-5">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, doloribus eaque est, excepturi expedita
-          laboriosam natus non nostrum nulla officia praesentium sapiente sit voluptas. Autem consequuntur dicta
-          provident quam sit?
-        </p>
-      </div>
-    </section>
-    <section class="light">
-      <v-container>
+      </section>
+      <!--      famous dishes-->
+      <section>
+        <div>
+          <div class="my-5 famous pl-3">
+            <h1 class="font-weight-light">
+              Some Of Our
+            </h1>
+            <h1 class="display-2 orange--text font-weight-bold">Famous Dishes</h1>
+          </div>
+          <p class="mt-5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, doloribus eaque est, excepturi expedita
+            laboriosam natus non nostrum nulla officia praesentium sapiente sit voluptas. Autem consequuntur dicta
+            provident quam sit?
+          </p>
+        </div>
+        <v-row>
+          <v-col class="text-center px-3">
+            <div class="white fill-height rounded">
+              <div>
+                <v-img src="../../assets/img/about/1.png" max-width="100px" class="mx-auto"></v-img>
+              </div>
+              <div class="px-6">
+                <h3>
+                  <!--                  {{ $t("services.1.title") }}-->
+                  Lorem ipsum.
+                </h3>
+                <p>
+                  <!--                  {{ $t("services.1.desc") }}-->
+                  Lorem ipsum dolor sit amet, consectetur.
+                </p>
+              </div>
+            </div>
+          </v-col>
+          <v-col class="text-center px-3">
+            <div class="white fill-height rounded">
+              <div>
+                <v-img src="../../assets/img/about/1.png" max-width="100px" class="mx-auto"></v-img>
+              </div>
+              <div class="px-6">
+                <h3>
+                  <!--                  {{ $t("services.3.title") }}-->
+                  Lorem ipsum.
+                </h3>
+                <p>
+                  <!--                  {{ $t("services.3.desc") }}-->
+                  Lorem ipsum dolor sit amet, consectetur.
+                </p>
+              </div>
+            </div>
+          </v-col>
+          <v-col class="text-center px-3">
+            <div class="white fill-height rounded">
+              <div>
+                <v-img src="../../assets/img/about/1.png" max-width="100px" class="mx-auto"></v-img>
+              </div>
+              <div class="px-6">
+                <h3>
+                  <!--                  {{ $t("services.2.title") }}-->
+                  Lorem ipsum.
+                </h3>
+                <p>
+                  <!--                  {{ $t("services.2.desc") }}-->
+                  Lorem ipsum dolor sit amet, consectetur.
+                </p>
+              </div>
+            </div>
+          </v-col>
+        </v-row>
+      </section>
+      <!--      Menu-->
+      <section>
+        <div>
+          <div class="my-5 famous pl-3">
+            <h1 class="display-2 orange--text font-weight-bold">Menu</h1>
+          </div>
+          <p class="mt-5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, doloribus eaque est, excepturi expedita
+            laboriosam natus non nostrum nulla officia praesentium sapiente sit voluptas. Autem consequuntur dicta
+            provident quam sit?
+          </p>
+        </div>
         <v-sheet
             v-for="r in products" :key="r.id"
-            :elevation="1"
             class="mx-auto my-5 light"
             max-height="500"
             width="100%"
@@ -130,9 +196,8 @@
             </v-row>
           </v-container>
         </v-sheet>
-      </v-container>
-    </section>
-
+      </section>
+    </v-container>
   </div>
 
 
@@ -147,11 +212,9 @@ export default {
   data: () => ({
     products: []
   }),
-
   methods: {},
   mounted() {
     axios.get("https://mondemenagement.ca/categories?$eager=products").then(res => {
-      console.log(res.data.data)
       this.products = res.data.data
     })
   }
@@ -164,10 +227,9 @@ export default {
   background-size: cover;
 }
 
-.half-bordered {
-  border: 8px solid blue;
-  border-top: 0;
-  border-left: 0;
+.famous {
+  border: 0 solid #FF9800;
+  border-left-width: 8px;
   border-radius: 10px;
 }
 </style>

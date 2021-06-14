@@ -8,7 +8,7 @@
       <form @submit.prevent="subscribe">
         <div class="row ">
           <div class="col-12">
-            <v-text-field color="white" outlined
+            <v-text-field color="white" background-color="white" outlined
                           label="Email"
                           class="custom-label-color"
             >
@@ -40,8 +40,9 @@ export default {
 }
 
 .mailbox {
-  min-height: 30vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url('../assets/img/mailbox.jpg') center center no-repeat;
+
+  min-height: 300px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/img/mailbox.jpg') center bottom no-repeat;
   background-size: cover;
 }
 
