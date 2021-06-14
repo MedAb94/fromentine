@@ -1,0 +1,78 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About us",
+    "parts": "Parts",
+    "contact": "Contact us",
+    "account": "Account",
+    "search": "Enter the name or the part number #"
+  },
+  "home": {
+    "title": {
+      "1": "Your",
+      "2": "favorite",
+      "3": "food delivered",
+      "4": "to you"
+    }
+  },
+  "brands": "Our Brands",
+  "suppliers": "Our Suppliers",
+  "services": {
+    "1": {
+      "title": "Choose A Restaurant",
+      "desc": "lorem ipsum lorem ipsum lorem ipsum"
+    },
+    "2": {
+      "title": "Choose a Dish",
+      "desc": "lorem ipsum lorem ipsum lorem ipsum"
+    },
+    "3": {
+      "title": "Pickup Or Delivery",
+      "desc": "lorem ipsum lorem ipsum lorem ipsum"
+    },
+    "title": "Choose Your Restaurant",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda atque delectus, deserunt distinctio dolore doloribus eos exercitationem explicabo, facere fuga illo necessitatibus nihil obcaecati provident, quia ratione sequi voluptate.."
+  },
+  "contact": {
+    "title": "Do you have questions or comments? ",
+    "subtitle": "Please use the section below to contact us",
+    "name": "Your name",
+    "email": "Your E-mail",
+    "subject": "Subject",
+    "message": "Your message",
+    "send": "Send"
+  },
+  "parts": {
+    "filter": {
+      "year": "Year",
+      "make": "Make",
+      "model": "Model"
+    },
+    "selectCateg": "Select a category"
+  },
+  "mailBox": {
+    "stay": "Stay informed",
+    "subscribe": "Subscribe to our mailbox",
+    "subscribeBtn": "Send"
+  },
+  "footer": {
+    "address": "Address",
+    "links": "Quick links",
+    "delivery": "Delivery available in Montreal and Areas"
+  },
+  "auth": {
+    "login": "USER LOGIN",
+    "email": "Email",
+    "password": "Password",
+    "forgetPassword": "Forget Password",
+    "signIn": "Sign in",
+    "dontHaveAccount": "Dont have an account",
+    "create": "Create now",
+    "signInWith": "Sign in with"
+  },
+  "about": {
+    "hero": "We are the reference for automotive parts",
+    "1": "Located in North Montreal, CPF Auto Parts gives you access to a wide range of auto parts at competitive prices. Whatever the part you are looking for, we have it.",
+    "2": "Use our website and shop from the comfort of your home and we will deliver your parts. In-store pickup is also available. We deliver in the greater Montreal area, as well as the surrounding cities."
+  }
+}
