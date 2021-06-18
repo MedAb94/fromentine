@@ -2,36 +2,29 @@
   "navbar": {
     "home": "Home",
     "about": "About us",
-    "parts": "Parts",
     "contact": "Contact us",
-    "account": "Account",
-    "search": "Enter the name or the part number #"
+    "account": "Account"
   },
   "home": {
-    "title": {
-      "1": "Your",
-      "2": "favorite",
-      "3": "food delivered",
-      "4": "to you"
-    }
+    "title": "Your favorite dishes from the restaurant to your door",
+    "search": "Enter your address",
+    "find": "Find a restaurant"
   },
-  "brands": "Our Brands",
-  "suppliers": "Our Suppliers",
   "services": {
     "1": {
-      "title": "Choose A Restaurant",
-      "desc": "lorem ipsum lorem ipsum lorem ipsum"
+      "title": "Shipping in Gatineau and Ottawa",
+      "desc": "We quickly deliver auto parts in the greater Montreal and areas"
     },
-    "2": {
-      "title": "Choose a Dish",
-      "desc": "lorem ipsum lorem ipsum lorem ipsum"
+    "2":{
+      "title": "Secure payments",
+      "desc": "Pay securely by Visa, Mastercard or Paypal"
     },
-    "3": {
-      "title": "Pickup Or Delivery",
-      "desc": "lorem ipsum lorem ipsum lorem ipsum"
+    "3":  {
+      "title": "Here To Support You",
+      "desc": "If you have any question or comment, please contact us during our hours of operation or fill the contact us form."
     },
-    "title": "Choose Your Restaurant",
-    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda atque delectus, deserunt distinctio dolore doloribus eos exercitationem explicabo, facere fuga illo necessitatibus nihil obcaecati provident, quia ratione sequi voluptate.."
+    "title": "Choose your restaurant",
+    "subtitle": "Select your restaurant, Order your dish and Pick your order at the restaurant or have it delivered."
   },
   "contact": {
     "title": "Do you have questions or comments? ",
@@ -42,14 +35,6 @@
     "message": "Your message",
     "send": "Send"
   },
-  "parts": {
-    "filter": {
-      "year": "Year",
-      "make": "Make",
-      "model": "Model"
-    },
-    "selectCateg": "Select a category"
-  },
   "mailBox": {
     "stay": "Stay informed",
     "subscribe": "Subscribe to our mailbox",
@@ -58,7 +43,8 @@
   "footer": {
     "address": "Address",
     "links": "Quick links",
-    "delivery": "Delivery available in Montreal and Areas"
+    "delivery": "Order online and receive your favorite meals quickly",
+    "download": "Download our app"
   },
   "auth": {
     "login": "USER LOGIN",
@@ -71,8 +57,16 @@
     "signInWith": "Sign in with"
   },
   "about": {
-    "hero": "We are the reference for automotive parts",
-    "1": "Located in North Montreal, CPF Auto Parts gives you access to a wide range of auto parts at competitive prices. Whatever the part you are looking for, we have it.",
-    "2": "Use our website and shop from the comfort of your home and we will deliver your parts. In-store pickup is also available. We deliver in the greater Montreal area, as well as the surrounding cities."
+    "hero": "Your favorite food delivered to you",
+    "1": "Choose your next meal from the menus of our partner restaurants.",
+    "2": "",
+    "3": "Download our mobile app and have access to delicious menus at your fingertips."
+  },
+  "menu": {
+    "subtitle": "The cream of African cuisine",
+    "orderNow": "Order now",
+    "famous": "Famous dishes",
+    "enjoy": "Enjoy the most popular dishes with our customers",
+    "main": "MAIN DISHES"
   }
 }

@@ -1,25 +1,16 @@
 <template>
-  <div class="light">
-    <section class="hero">
+  <div class="light" >
+    <section class="hero" style="position: relative">
       <v-container class="fill-height">
         <v-row class="fill-height" align="center" justify="stretch">
           <v-col class=" white--text" cols="12" lg="6" md="6">
-            <h2 class="display-1"> The best </h2>
-            <v-row>
-              <v-col>
-                <span class="h1 display-2 orange--text font-weight-bold">
-                Restaurant
-              </span>
-                <span class="display-1">in Ottawa</span>
-              </v-col>
-
-            </v-row>
-
-            <p>The fine art of the modern professional cooking methods</p>
-            <v-btn x-large class="orange my-3 white--text" text> Order now</v-btn>
+            <h1 class="orange--text display-2">FROMENTINE</h1>
+            <p>{{$t("menu.subtitle")}}</p>
+            <v-btn x-large class="orange my-3 white--text" text> {{$t("menu.orderNow")}}</v-btn>
           </v-col>
         </v-row>
       </v-container>
+      <v-img src="../../assets/logo.jpg" max-width="50" style="position: absolute; bottom: 0"></v-img>
     </section>
     <v-container>
       <section class="py-8">
@@ -81,65 +72,24 @@
       <section>
         <div>
           <div class="my-5 famous pl-3">
-            <h1 class="font-weight-light">
-              Some Of Our
-            </h1>
-            <h1 class="display-2 orange--text font-weight-bold">Famous Dishes</h1>
+            <h1 class="display-2 orange--text font-weight-bold">{{$t("menu.famous")}}</h1>
           </div>
           <p class="mt-5">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, doloribus eaque est, excepturi expedita
-            laboriosam natus non nostrum nulla officia praesentium sapiente sit voluptas. Autem consequuntur dicta
-            provident quam sit?
+            {{$t("menu.enjoy")}}
           </p>
         </div>
         <v-row>
-          <v-col class="text-center px-3">
-            <div class="white fill-height rounded">
-              <div>
-                <v-img src="../../assets/img/about/1.png" max-width="100px" class="mx-auto"></v-img>
+          <v-col class="text-center px-3" v-for="i in products[0].products.slice(0,3)" :key="i.id">
+            <div class="white fill-height rounded pt-3">
+              <div class="mt-3">
+                <v-img :src="i.img_url" max-width="100px" class="mx-auto"></v-img>
               </div>
               <div class="px-6">
                 <h3>
-                  <!--                  {{ $t("services.1.title") }}-->
-                  Lorem ipsum.
+                  {{i.name}}
                 </h3>
                 <p>
-                  <!--                  {{ $t("services.1.desc") }}-->
-                  Lorem ipsum dolor sit amet, consectetur.
-                </p>
-              </div>
-            </div>
-          </v-col>
-          <v-col class="text-center px-3">
-            <div class="white fill-height rounded">
-              <div>
-                <v-img src="../../assets/img/about/1.png" max-width="100px" class="mx-auto"></v-img>
-              </div>
-              <div class="px-6">
-                <h3>
-                  <!--                  {{ $t("services.3.title") }}-->
-                  Lorem ipsum.
-                </h3>
-                <p>
-                  <!--                  {{ $t("services.3.desc") }}-->
-                  Lorem ipsum dolor sit amet, consectetur.
-                </p>
-              </div>
-            </div>
-          </v-col>
-          <v-col class="text-center px-3">
-            <div class="white fill-height rounded">
-              <div>
-                <v-img src="../../assets/img/about/1.png" max-width="100px" class="mx-auto"></v-img>
-              </div>
-              <div class="px-6">
-                <h3>
-                  <!--                  {{ $t("services.2.title") }}-->
-                  Lorem ipsum.
-                </h3>
-                <p>
-                  <!--                  {{ $t("services.2.desc") }}-->
-                  Lorem ipsum dolor sit amet, consectetur.
+                  {{i.description}}
                 </p>
               </div>
             </div>
@@ -150,13 +100,8 @@
       <section>
         <div>
           <div class="my-5 famous pl-3">
-            <h1 class="display-2 orange--text font-weight-bold">Menu</h1>
+            <h1 class="display-2 orange--text font-weight-bold">{{$t("menu.main")}}</h1>
           </div>
-          <p class="mt-5">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, doloribus eaque est, excepturi expedita
-            laboriosam natus non nostrum nulla officia praesentium sapiente sit voluptas. Autem consequuntur dicta
-            provident quam sit?
-          </p>
         </div>
         <v-sheet
             v-for="r in products" :key="r.id"
@@ -199,8 +144,6 @@
       </section>
     </v-container>
   </div>
-
-
 </template>
 <script>
 import MailBox from "../../components/MailBox.vue";
@@ -214,7 +157,7 @@ export default {
   }),
   methods: {},
   mounted() {
-    axios.get("https://mondemenagement.ca/categories?$eager=products").then(res => {
+    axios.get("https://still-garden-34311.herokuapp.com/categories?$eager=products").then(res => {
       this.products = res.data.data
     })
   }
@@ -223,7 +166,7 @@ export default {
 <style scoped>
 .hero {
   height: 45vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url('../../assets/img/about/about.jpg') no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url('../../assets/img/Frometine-image-main.webp') no-repeat center center;
   background-size: cover;
 }
 

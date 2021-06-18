@@ -5,7 +5,7 @@
         <v-row class="fill-height" align="center" justify="stretch">
           <v-col class="text-center white--text">
             <h1 class="display-2">
-              Your favorite food delivered to you
+              {{ $t('about.hero') }}
             </h1>
           </v-col>
         </v-row>
@@ -15,7 +15,7 @@
       <v-container>
         <v-row align="center ">
           <v-col cols="12" lg="6" md="6" class="pa-5">
-            <img src="../assets/img/about/2.jpg" style="width: 100%" alt="">
+            <img src="../assets/img/about/1.jpg" style="width: 100%" alt="">
           </v-col>
           <v-col cols="12" lg="6" md="6">
             <p>{{ $t("about.1") }}</p>
@@ -29,11 +29,15 @@
           <p>{{ $t("about.2") }}</p>
         </v-col>
         <v-col cols="12" lg="6" md="6">
-          <img src="../assets/img/about/1.png" style="width: 100%" alt="">
+          <img src="../assets/img/Image-about-2.webp" style="width: 100%" alt="">
         </v-col>
       </v-row>
     </v-container>
-
+    <div class="bordered text-center py-3 ma-3">
+      {{ $t('about.3') }} <br><br>
+      <img src="../assets/img/App store.png" class="mx-2" width="120" height="40">
+      <img src="../assets/img/playStore.png" class="mx-2" width="120" height="40">
+    </div>
     <mail-box/>
   </div>
 
@@ -44,43 +48,9 @@ import MailBox from "../components/MailBox.vue";
 export default {
   name: 'Home',
   components: {MailBox},
-  data: () => ({
-    fab: false,
-    model: 0,
-    colors: [
-      'primary',
-      'secondary',
-      'yellow darken-2',
-      'red',
-      'orange',
-    ],
-    valid: true,
-    name: '',
-    nameRules: [
-      v => !!v || this.$i18n.locale === 'fr' ? 'Veillez saisir votre nom' : 'Name is required',
-    ],
-    email: '',
-    emailRules: [
-      v => !!v || this.$i18n.locale === 'fr' ? 'Veillez saisir votre couriel' : 'Email is required',
-      v => /.+@.+\..+/.test(v) || 'E-mail Invalide',
-    ],
-    select: null,
-  }),
+  data: () => ({}),
 
-  methods: {
-    validate() {
-      this.$refs.form.validate()
-    },
-    onScroll(e) {
-      if (typeof window === 'undefined') return
-      const top = window.pageYOffset || e.target.scrollTop || 0
-      this.fab = top > 20
-    },
-    toTop() {
-      this.$vuetify.goTo(0)
-    }
-
-  },
+  methods: {},
 }
 </script>
 <style scoped>
@@ -90,10 +60,8 @@ export default {
   background-size: cover;
 }
 
-.half-bordered {
-  border: 8px solid blue;
-  border-top: 0;
-  border-left: 0;
+.bordered {
+  border: 5px solid blue;
   border-radius: 10px;
 }
 </style>

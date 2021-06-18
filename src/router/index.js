@@ -11,22 +11,34 @@ const routes = [
         component: Home
     },
     {
+        path: '/contact',
+        name: 'Contact',
+        component: () => import('../views/Contact.vue')
+    },
+    {
         path: '/about',
         name: 'About',
         component: () => import('../views/About.vue')
     },
     {
-        path: '/restaux',
-        name: 'RestauDetails',
-        component: () => import('../views/restau/Index'),
+        path: '/menu',
+        name: 'Menu',
+        component: () => import('../views/restau/Menu')
+    },
+    {
+        path: '/auth',
+        name: 'Auth',
+        component: () => import("../views/auth/Index"),
+        redirect: '/auth/login',
         children: [
             {
-                path: ':name/:id',
-                name: 'Menu',
-                component: () => import('../views/restau/Menu')
+                path: 'login',
+                name: 'Login',
+                component: () => import("../views/auth/Login"),
             }
         ]
     }
+
 ]
 
 const router = new VueRouter({

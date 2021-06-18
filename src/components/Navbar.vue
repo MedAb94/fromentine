@@ -6,20 +6,26 @@
         flat
     >
 
-      <div class="mt-1">
-        <router-link class="white--text" :to="{name: 'Home'}">
-          LOGO
-        </router-link>
-      </div>
+      <router-link class="white--text" :to="{name: 'Home'}">
+        <v-img
+            alt="Logo"
+            src="../assets/logo.jpg"
+            max-width="80"
+        />
+      </router-link>
       <v-spacer/>
-      www.votresiteweb.ca
-      <v-spacer/>
-      <v-btn
-          text class="white--text"
-      >
-        <v-icon class="mr-3">mdi-face</v-icon>
-        ACCOUNT
+      <v-btn text link :to="{name: 'Home'}" v-if="!$route.matched.some(({ name }) => name === 'Home')">
+        {{ $t('navbar.home') }}
       </v-btn>
+      <v-btn text :to="{name: 'About'}">{{ $t('navbar.about') }}</v-btn>
+      <v-btn
+          text :to="{name: 'Login'}"
+           class="white--text"
+      >
+        <v-icon class="mr-3">mdi-account-circle-outline</v-icon>
+        {{ $t('navbar.account') }}
+      </v-btn>
+      <v-btn text :to="{name: 'Contact'}">{{ $t('navbar.contact') }}</v-btn>
       <v-btn
           text class="white--text"
           v-if="$i18n.locale==='en'"
@@ -54,7 +60,7 @@ export default {
   }),
 }
 </script>
-<style>
+<style >
 a {
   text-decoration: none;
 }

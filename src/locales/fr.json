@@ -2,38 +2,29 @@
   "navbar": {
     "home": "ACCUEIL",
     "about": "À PROPOS",
-    "parts": "LES PIÈCES",
     "contact": "CONTACTEZ-NOUS",
-    "account": "COMPTE",
-    "search": "Entrez le nom ou le numéro de pièce #"
+    "account": "COMPTE"
   },
   "services": {
     "1": {
-      "title": "Livraison dans la région de Montréal et ses enviorons",
-      "desc": "Nous livrons rapidement les pièces d'auto dans la grande région de Montréal et les villes environnantes"
+      "title": "Livraison dans la région de Gatineau et Ottawa",
+      "desc": "Commandez vos repas favoris pour la cueillette ou la livraison. Nous livrons rapidement dans les régions de Gatineau et Ottawa."
     },
     "2": {
+      "title": "Paiements sécurisés",
+      "desc": "Payez sécuritairement par Visa, Mastercard ou Paypal"
+    },
+    "3": {
       "title": "Nous sommes là pour vous aider",
       "desc": "Si vous avez des questions ou des commentaires, veuillez nous contacter pendant nos heures d'ouverture ou remplir le formulaire contactez-nous."
     },
-    "3": {
-      "title": "Paiements sécurisés",
-      "desc": "Magasinez et payez sécuritairement par Visa, Mastercard ou Paypal"
-    },
-    "weHave": "Nous avons la pièce d'auto que vous cherchez",
-    "weHaveText": "Quelle que soit la marque de votre véhicule et la pièce dont vous avez besoin, nous l'avons et pouvons vous la livrer rapidement.",
-    "viewParts": "VOIR LES PIÈCES "
+    "title": "Choisissez votre restaurant",
+    "subtitle": "Sélectionnez  votre restaurant, Commandez votre plat et Cueillez votre commande au restaurant ou faites-vous livrer."
   },
   "home": {
-    "title": {
-      "1": "Nous vendons",
-      "10": "les pièces d’autos",
-      "2": "à des prix compétitifs"
-    },
-    "shopNow": "MAGASINER MAINTENANT",
-    "zipcode": "Entrer un code postale",
-    "verifyAddress": "Vérifiez la disponibilité de livraison pour une adresse"
-
+    "title": "Vos plats préférés du restaurant jusqu’à votre porte",
+    "search": "Saisir votre adresse",
+    "find": "Trouver un restaurant"
   },
   "contact": {
     "title": "Vous avez des questions ou commentaires?",
@@ -43,25 +34,16 @@
     "message": "Votre message",
     "send": "Envoyer"
   },
-  "parts": {
-    "filter": {
-      "year": "Année",
-      "make": "Marque",
-      "model": "Modéle"
-    },
-    "selectCateg": "Choisir une catégorie"
-  },
   "mailBox": {
     "stay": "Resté informé",
     "subscribe": "Abonnez-vous à notre boîte aux lettres",
     "subscribeBtn": "Envoyer"
   },
-  "brands": "Nos marques",
-  "suppliers": "Nos fournisseurs",
   "footer": {
     "address": "Adresse",
     "links": "Liens rapides",
-    "delivery": "Livraison dans la region de Montréal et ses environs"
+    "delivery": "Commandez en ligne et recevez vos mets préférés rapidement",
+    "download": "Téléchargez notre application"
   },
   "auth": {
     "login": "CONNEXION",
@@ -73,8 +55,17 @@
     "signInWith": "Connexion avec"
   },
   "about": {
-    "hero": "Nous sommes la référence en matière de pièces automobiles",
-    "1": "Situé à Montréal nord, CPF pièces d’auto vous donne accès à un large éventail de pièces automobile à des prix compétitifs.  Peu importe la pièce dont vous cherchez, nous l’avons",
-    "2": "Utilisez notre site internet et magasinez dans le confort de votre foyer et nous vous livrerons vos pièces. La cueillette en magasin est disponible également. Nous livrons dans la grande région de Montréal, ainsi que les villes environnantes."
+    "hero": "Vos mets préférés livrés à votre domicile",
+    "1": "Choisissez votre prochain repas dans les menus de nos restaurants partenaires.",
+    "2": "Utilisez notre site internet ou l’application mobile et commandez depuis le confort de votre foyer et nous livrerons, la cueillette  au restaurant est disponible également. Livraison disponible dans Gatineau et Ottawa.",
+    "3": "Téléchargez notre application mobile et ayez accès aux menus délicieux au bout de vos doigts."
+  },
+  "menu": {
+    "subtitle": "La crème de la cuisine africaine",
+    "orderNow": "Commandez maintenant",
+    "famous": "Plats populaires",
+    "enjoy": "Profitez de plats les plus populaires auprès de nos clients",
+    "main": "PLATS PRINCIPAUX"
   }
+
 }

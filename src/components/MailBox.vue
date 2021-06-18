@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 .newsLetter .v-btn {
   margin-top: -16px;
   margin-right: -10px;
@@ -48,7 +48,7 @@ export default {
 
 
 .custom-label-color .v-label {
-  color: white;
+  color: black !important;
   opacity: 1;
 }
 

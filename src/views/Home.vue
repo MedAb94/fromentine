@@ -4,17 +4,13 @@
       <v-container class="fill-height">
         <v-row class="fill-height" justify="stretch" align="center">
           <v-col cols="12" md="8" lg="6" xl="4" class=" white--text">
-            <h1 class="display-2">
-              {{ $t('home.title.1') }}
-              <span class="blue--text">{{ $t('home.title.2') }}</span>
-              {{ $t('home.title.3') }}
-              <span class="blue--text">{{ $t('home.title.4') }}</span>
+            <h1 class="display-1 my-5">
+              {{ $t('home.title') }}
             </h1>
-            <h1 class="my-3 font-weight-light">Discover great places to eat arround you!</h1>
             <div>
               <v-text-field background-color="white"
                             outlined
-                            label="Search places"
+                            :label="$t('home.search')"
                             class="custom-label-color"
                             prepend-inner-icon="mdi-map-marker"
               >
@@ -23,7 +19,7 @@
                     x-large
                     class="primary white--text"
                 >
-                  Find restaurants
+                   {{ $t('home.find') }}
                 </v-btn>
               </v-text-field>
             </div>
@@ -34,47 +30,50 @@
     </section>
     <v-container>
       <section class="py-8">
-        <v-row>
-          <v-col class="text-center pa-3">
-            <div class="white fill-height py-3 rounded">
-              <div>
-                <v-img src="../assets/icons/restaurant.png" max-width="80px" class="mx-auto"></v-img>
+        <v-card class="transparent pa-5" flat rounded>
+          <v-row>
+            <v-col class="text-center px-3">
+              <div class="white fill-height rounded">
+                <div>
+                  <v-img max-width="50" class="mx-auto" src="../assets/icons/delivery-man.png"></v-img>
+                </div>
+                <div class="px-6">
+                  <h3>
+                    {{ $t("services.1.title") }}
+                  </h3>
+                  <p>{{ $t("services.1.desc") }}</p>
+                </div>
               </div>
-              <div class="px-6">
-                <h3>
-                  {{ $t("services.1.title") }}
-                </h3>
-                <p>{{ $t("services.1.desc") }}</p>
+            </v-col>
+            <v-col class="text-center px-3">
+              <div class="white fill-height rounded">
+                <div>
+                  <v-icon x-large color="primary" class="mb-5">mdi-headset</v-icon>
+                </div>
+                <div class="px-6">
+                  <h3>
+                    {{ $t("services.2.title") }}
+                  </h3>
+                  <p>{{ $t("services.2.desc") }}</p>
+                </div>
               </div>
-            </div>
-          </v-col>
-          <v-col class="text-center pa-3">
-            <div class="white py-3 fill-height rounded">
-              <div>
-                <v-img src="../assets/icons/serving-dish.png" max-width="80px" class="mx-auto"></v-img>
+            </v-col>
+            <v-col class="text-center px-3">
+              <div class="white fill-height rounded">
+                <div>
+                  <v-icon x-large color="primary" class="mb-5">mdi-credit-card-settings-outline</v-icon>
+                </div>
+                <div class="px-6">
+                  <h3>
+                    {{ $t("services.3.title") }}
+                  </h3>
+                  <p>{{ $t("services.3.desc") }}</p>
+                </div>
               </div>
-              <div class="px-6">
-                <h3>
-                  {{ $t("services.2.title") }}
-                </h3>
-                <p>{{ $t("services.2.desc") }}</p>
-              </div>
-            </div>
-          </v-col>
-          <v-col class="text-center pa-3">
-            <div class="white py-3 fill-height rounded">
-              <div>
-                <v-img src="../assets/icons/delivery-man.png" max-width="80px" class="mx-auto"></v-img>
-              </div>
-              <div class="px-6">
-                <h3>
-                  {{ $t("services.3.title") }}
-                </h3>
-                <p>{{ $t("services.3.desc") }}</p>
-              </div>
-            </div>
-          </v-col>
-        </v-row>
+            </v-col>
+          </v-row>
+        </v-card>
+
       </section>
       <!--Restaurants list-->
       <section class="my-5">
@@ -89,7 +88,7 @@
           </p>
         </div>
         <v-row justify="stretch">
-          <v-col cols="12" lg="4" md="4" v-for="n in 9">
+          <v-col cols="12" lg="4" md="4" >
             <router-link
                 class="white--text "
                 :to="{name : 'Menu', params:{name: 'Res 1', id: c}}"
@@ -100,7 +99,7 @@
                   max-width="344"
               >
                 <v-img
-                    src="../assets/img/restau.jpg"
+                    src="../assets/logo.jpg"
                 />
                 <v-card-title class="primary ">
                   <H2 class=" blue--text text-center">
